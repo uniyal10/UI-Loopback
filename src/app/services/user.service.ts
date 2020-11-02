@@ -18,8 +18,20 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
    
-  getUsers():Observable<User[]>{
-     const url:string='http://localhost:3000/users'
+  getUsers(id:string):Observable<User[]>{
+     const url:string=`http://localhost:3000/customers/${id}/users`
      return this.http.get<User[]>(url)
+  }
+  getUser(id:string):Observable<User>{
+    const url:string=`http://localhost:3000/users/${id}`
+    return this.http.get<User>(url)
+  }
+  saveUser(id:number,user:any):Observable<any>{
+    const url = `http://localhost:3000/users/${id}`
+    return this.http.patch(url,user,httpOptions)
+  }
+  deleteUser(id:number):Observable<any>{
+    const url=`http://localhost:3000/users/${id}`
+    return this.http.delete(url,httpOptions)
   }
 }

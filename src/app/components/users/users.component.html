@@ -1,1 +1,1 @@
-<p>users works!</p>
+<app-user (deleteUserEvent)="deleteUserEvent($event)" *ngFor="let user of users" [user]="user"></app-user>
