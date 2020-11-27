@@ -34,4 +34,9 @@ export class UserService {
     const url=`http://localhost:3000/users/${id}`
     return this.http.delete(url,httpOptions)
   }
+  addUser(id:string,user:User){
+  user.customerId = +id
+    const url=`http://localhost:3000/users/`
+    return this.http.post(url,user,httpOptions)
+  }
 }

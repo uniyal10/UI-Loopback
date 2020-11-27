@@ -36,5 +36,9 @@ export class CustomerService {
     const url = `http://localhost:3000/customers/${id}`
     return this.http.delete(url,httpOptions)
   }
+  addCustomer(customer:Customer){
+    const url = `http://localhost:3000/customers`
+    return this.http.post(url,JSON.stringify(customer),httpOptions)
+  }
 
 }
