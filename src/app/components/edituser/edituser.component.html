@@ -71,12 +71,14 @@
     <div class="container">
   
     
-    <div>
+    <div style="position: relative;">
       <input  required placeholder="firstname" formControlName="firstName" name="firstname"   type="text" >
-      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('firstName'))" style="color: red;font-weight: bold; ">First Name is required</span>
+      <span  *ngIf="checkRequiredCondition(this.userDetailsForm.get('firstName'))" style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+      box-shadow: 5px 5px #888888;
+     position:absolute; top: -20px; background-color: red;">First Name is required</span>
     
     </div>
-    <div>
+    <div >
       <input placeholder="middlename"  formControlName="middleName" name="middlename"  type="text"  >
     
     </div>
@@ -86,26 +88,38 @@
   
    </div>
     
-    <div>
+    <div style="position: relative;">
       <input required placeholder="email"  formControlName="email" name="email"  type="email"  > 
-      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('email'))" style="color: red; font-weight: bold;">Email is required</span>
-       <span *ngIf="checkInvalidCondition(this.userDetailsForm.get('email'))" style="color: red;font-weight: bold; ">Email is invalid</span>
+      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('email'))" style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+      box-shadow: 5px 5px #888888;
+     position:absolute; top: -20px; background-color: red;">Email is required</span>
+       <span *ngIf="checkInvalidCondition(this.userDetailsForm.get('email'))" style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+       box-shadow: 5px 5px #888888;
+      position:absolute; top: -20px; background-color: red;">Email is invalid</span>
       
     </div> 
-    <div>
+    <div style="position: relative;">
       <input placeholder="number" formControlName="phoneNumber" type="number" name="phoneNumber"    >
-      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('phoneNumber'))" style="color: red;font-weight: bold; ">Number is required</span>
-      <span *ngIf="checkInvalidCondition(this.userDetailsForm.get('phoneNumber'))" style="color: red;font-weight: bold; ">Number is invalid</span>
+      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('phoneNumber'))" style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+      box-shadow: 5px 5px #888888;
+     position:absolute; top: -20px; background-color: red;">Number is required</span>
+      <span *ngIf="checkInvalidCondition(this.userDetailsForm.get('phoneNumber'))" style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+      box-shadow: 5px 5px #888888;
+     position:absolute; top: -20px; background-color: red;">Number is invalid</span>
     
     </div>
-    <div>
+    <div style="position: relative;">
       <input placeholder="role"  formControlName="role" name="role"  type="text"  [disabled]="true">
-      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('role'))" style="color: red;font-weight: bold; ">Role is required</span>
+      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('role'))" style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+  box-shadow: 5px 5px #888888;
+ position:absolute; top: -20px; background-color: red;">Role is required</span>
   
     </div>
-    <div>
+    <div style="position: relative;">
       <input placeholder="address"   formControlName="address" name="address"  type="text"  >
-      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('address'))" style="color: red;font-weight: bold; ">Address is required</span>
+      <span *ngIf="checkRequiredCondition(this.userDetailsForm.get('address'))" style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+  box-shadow: 5px 5px #888888;
+ position:absolute; top: -20px; background-color: red;">Address is required</span>
   
     </div>
   <div class="tooltip">

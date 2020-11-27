@@ -2,21 +2,29 @@
  
     <form [formGroup]="customerDetailsForm">
       <div class="container">
-        <div>
+        <div style="position: relative;">
           <input  placeholder="name" formControlName='name' >
-          <span style="color: red;font-weight: bold; text-align: center;" *ngIf="checkRequiredCondition(this.customerDetailsForm.get('name'))">name is required</span>
+          <span style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+          box-shadow: 5px 5px #888888;
+         position:absolute; top: -20px; background-color: red;" *ngIf="checkRequiredCondition(this.customerDetailsForm.get('name'))">name is required</span>
         
         </div>
-        <div>
+        <div style="position: relative;">
           <input placeholder="website"   formControlName='website' >
-          <span style="color: red;font-weight: bold;" *ngIf="checkRequiredCondition(this.customerDetailsForm.get('website'))">website is required</span>
-          <span style="color: red;font-weight: bold;" *ngIf="checkInvalidCondition(this.customerDetailsForm.get('website'))">website is Invalid</span>
+          <span  style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+          box-shadow: 5px 5px #888888;
+         position:absolute; top: -20px; background-color: red;" *ngIf="checkRequiredCondition(this.customerDetailsForm.get('website'))">website is required</span>
+          <span style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+          box-shadow: 5px 5px #888888;
+         position:absolute; top: -20px; background-color: red;" *ngIf="checkInvalidCondition(this.customerDetailsForm.get('website'))">website is Invalid</span>
 
         </div>
        
-        <div>
+        <div style="position: relative;">
           <input  placeholder="address" formControlName='address' >
-          <span style="color: red;font-weight: bold;" *ngIf="checkRequiredCondition(this.customerDetailsForm.get('address'))">address is required</span>
+          <span style="color: white;font-weight: bold; padding: 5px 10px; border-radius: 8px ;   box-shadow: 5px 10px #888888;
+          box-shadow: 5px 5px #888888;
+         position:absolute; top: -20px; background-color: red;" *ngIf="checkRequiredCondition(this.customerDetailsForm.get('address'))">address is required</span>
     
         </div>
         <!-- <button  [routerLink]="['/editCustomer',customer.id]">Edit</button>|| -->
